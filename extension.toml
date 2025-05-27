@@ -1,0 +1,7 @@
+id = "termux"
+name = "Termux"
+version = "0.1.0"
+schema_version = 1
+authors = ["Pavel Sobolev <contact@paveloom.dev>"]
+description = "termux-language-server support"
+repository = "https://gitlab.com/paveloom-g/rust/zed-termux"
