@@ -1,2 +1,5 @@
+/grammars
 /target
-/*.wasm
+
+**/*.ebuild
+**/*.wasm

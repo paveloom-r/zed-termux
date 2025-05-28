@@ -5,3 +5,13 @@ schema_version = 1
 authors = ["Pavel Sobolev <contact@paveloom.dev>"]
 description = "termux-language-server support"
 repository = "https://gitlab.com/paveloom-g/rust/zed-termux"
+
+[grammars.bash]
+repository = "https://github.com/tree-sitter/tree-sitter-bash"
+rev = "487734f87fd87118028a65a4599352fa99c9cde8"               # v0.23.3
+
+[language_servers.bash-language-server]
+languages = ["Ebuild"]
+
+[language_servers.termux-language-server]
+languages = ["Ebuild"]
