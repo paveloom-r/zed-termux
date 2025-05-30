@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.1.1 - 2025-05-30
 
-### Changed
+### Fixed
 
 - Don't hard code the Bash grammar (rely on the one shipped with Zed itself).
 
