@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Common Changelog](https://common-changelog.org),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.1.1 - 2025-05-30
+
+### Changed
+
+- Don't hard code the Bash grammar (rely on the one shipped with Zed itself).
+
 ## 0.1.0 - 2025-05-29
 
 _Initial release._
