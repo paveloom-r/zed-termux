@@ -20,17 +20,9 @@ impl zed::Extension for Extension {
             ));
         };
 
-        let mut args = vec![];
-        match language_server_id.as_ref() {
-            "bash-language-server" => {
-                args.push(String::from("start"));
-            }
-            _ => {}
-        }
-
         return Ok(zed::Command {
             command: language_server_path,
-            args,
+            args: vec![],
             env: vec![],
         });
     }

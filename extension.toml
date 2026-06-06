@@ -6,8 +6,5 @@ authors = ["Pavel Sobolev <contact@paveloom.dev>"]
 description = "termux-language-server support"
 repository = "https://gitlab.com/paveloom-g/rust/zed-termux"
 
-[language_servers.bash-language-server]
-languages = ["Ebuild"]
-
 [language_servers.termux-language-server]
 languages = ["Ebuild"]

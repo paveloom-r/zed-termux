@@ -1,17 +1,15 @@
 # Zed Termux extension
 
-This extension adds support for [`bash-language-server`] [1] and
-[`termux-language-server`] [2] to aid in creation of some specific Bash scripts
-(e.g., Gentoo's [ebuilds] [3]).
+This extension adds support for [`termux-language-server`][1] to aid in creation
+of some specific Bash scripts (e.g., Gentoo's [ebuilds][2]).
 
-[1]: https://github.com/bash-lsp/bash-language-server
-[2]: https://github.com/termux/termux-language-server
-[3]: https://wiki.gentoo.org/wiki/Ebuild
+[1]: https://github.com/termux/termux-language-server
+[2]: https://wiki.gentoo.org/wiki/Ebuild
 
 > [!WARNING]
-> Do note that this extension doesn't install the language servers, so their
-> binaries are assumed to be found in at least one of the directories stored in
-> the `PATH` environment variable.
+> Do note that this extension doesn't install the language server, so its binary
+> is assumed to be found in at least one of the directories stored in the `PATH`
+> environment variable.
 
 Git mirrors:
 - [Codeberg](https://codeberg.org/paveloom-r/zed-termux)
@@ -20,6 +18,6 @@ Git mirrors:
 
 # Acknowledgements
 
-The queries for Bash are adopted from the [queries] [4] used by Zed itself.
+The queries for Bash are adopted from the [queries][3] used by Zed itself.
 
-[4]: https://github.com/zed-industries/zed/tree/main/crates/grammars/src/bash
+[3]: https://github.com/zed-industries/zed/tree/main/crates/grammars/src/bash
