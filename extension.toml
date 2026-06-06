@@ -6,5 +6,9 @@ authors = ["Pavel Sobolev <contact@paveloom.dev>"]
 description = "termux-language-server support"
 repository = "https://gitlab.com/paveloom-g/rust/zed-termux"
 
+[grammars.ebuild]
+repository = "https://gitlab.com/paveloom-g/forks/tree-sitter-ebuild"
+rev = "fc374309b61a16d61d3b85246969a3ec393e9063" # v0.25.1
+
 [language_servers.termux-language-server]
 languages = ["Ebuild"]
