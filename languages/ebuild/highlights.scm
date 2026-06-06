@@ -11,31 +11,43 @@
 (variable_name) @variable
 
 [
+  "export"
+  "function"
+  "unset"
+  "local"
+  "declare"
+] @keyword
+
+[
   "case"
   "do"
   "done"
   "elif"
   "else"
   "esac"
-  "export"
   "fi"
   "for"
-  "function"
   "if"
   "in"
   "select"
   "then"
-  "unset"
   "until"
   "while"
-  "local"
-  "declare"
-] @keyword
+] @keyword.control
 
 (comment) @comment
 
-(function_definition name: (word) @function)
-(command_name (word) @function)
+; Shebang
+((program
+  .
+  (comment) @keyword.directive)
+  (#match? @keyword.directive "^#![ \t]*/"))
+
+(function_definition
+  name: (word) @function)
+
+(command_name
+  (word) @function)
 
 [
   (file_descriptor)
@@ -50,10 +62,10 @@
   (expansion)
 ] @embedded
 
-
 [
   "$"
   "&&"
+  "||"
   ">"
   "<<"
   ">>"
@@ -68,15 +80,41 @@
   "%%"
   "#"
   "##"
+  "+="
+  "-="
+  "*="
+  "/="
+  "%="
+  "**="
+  "<<="
+  ">>="
+  "&="
+  "^="
+  "|="
   "="
+  "=~"
   "=="
+  "!="
+  "-o"
+  "-a"
+  "^"
+  "&"
+  "<="
+  ">="
+  "+"
+  "-"
+  "*"
+  "**"
+  "!"
+  "++"
+  "--"
+  "~"
+  "?"
 ] @operator
 
 (test_operator) @keyword.operator
 
-[
-  ";"
-] @punctuation.delimiter
+";" @punctuation.delimiter
 
 [
   "("
@@ -87,8 +125,21 @@
   "]"
 ] @punctuation.bracket
 
+(test_command
+  [
+    "[["
+    "]]"
+  ] @punctuation.bracket)
+
+(compound_statement
+  [
+    "(("
+    "))"
+  ] @punctuation.bracket)
+
 (simple_expansion
   "$" @punctuation.special)
+
 (expansion
   "${" @punctuation.special
   "}" @punctuation.special) @embedded
@@ -97,7 +148,19 @@
   "$(" @punctuation.special
   ")" @punctuation.special)
 
-(
-  (command (_) @constant)
-  (#match? @constant "^-")
-)
+(arithmetic_expansion
+  [
+    "$(("
+    "$["
+    "))"
+    "]"
+  ] @punctuation.special)
+
+((command
+  (_) @constant)
+  (#match? @constant "^-"))
+
+(case_item
+  value: (_) @string.regex)
+
+(special_variable_name) @variable.special

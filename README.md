@@ -20,7 +20,6 @@ Git mirrors:
 
 # Acknowledgements
 
-The grammar files for Bash are adopted from the [grammar files] [4] used by Zed
-itself.
+The queries for Bash are adopted from the [queries] [4] used by Zed itself.
 
-[4]: https://github.com/zed-industries/zed/tree/main/crates/languages/src/bash
+[4]: https://github.com/zed-industries/zed/tree/main/crates/grammars/src/bash
