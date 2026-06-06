@@ -16,8 +16,8 @@ and this project adheres to [Semantic Versioning][semantic-versioning].
 
 ### Fixed
 
+- Ship the Bash grammar under the disguise of the Ebuild grammar (`cc9a080`)
 - Update the Tree-sitter queries (`bbd7696`)
-- Don't ship the Bash grammar anymore (`900a9da`)
 
 ## 0.1.2 - 2025-06-06
 
