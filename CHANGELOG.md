@@ -8,6 +8,17 @@ and this project adheres to [Semantic Versioning][semantic-versioning].
 [common-changelog]: https://common-changelog.org
 [semantic-versioning]: https://semver.org/spec/v2.0.0.html
 
+## 0.1.3 - 2026-06-06
+
+### Removed
+
+- Don't provide `bash-language-server` anymore (`a1a12de`)
+
+### Fixed
+
+- Update the Tree-sitter queries (`bbd7696`)
+- Don't ship the Bash grammar anymore (`900a9da`)
+
 ## 0.1.2 - 2025-06-06
 
 ### Fixed
