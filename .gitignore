@@ -1,5 +1,7 @@
 /.nvim.lua
 
+/Cargo.lock
+
 /grammars
 /target
 
